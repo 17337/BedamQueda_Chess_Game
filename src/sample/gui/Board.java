@@ -1,5 +1,10 @@
 package sample.gui;
 
+/**
+ * @author Bedam Queda, Erasmus
+ * @version 02/05/2021
+ */
+
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -15,7 +20,8 @@ public class Board extends VBox {
     private Label[] lettersCoordinates2;
 
     /**
-     * Constructor
+     * Constructor, which displays the numbers and letters around the board (graphical interface)
+     * que apresenta os números e as letras em volta do tabuleiro (interface gráfica)
      */
     public Board()
     {
