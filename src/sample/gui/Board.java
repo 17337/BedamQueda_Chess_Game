@@ -13,7 +13,7 @@ import javafx.scene.layout.VBox;
 
 public class Board extends VBox {
     private GridPane board;
-    //private BorderPane borderPane;
+    private BorderPane borderPane;
     private final Label[] numbersCoordinates;
     private final Label[] numbersCoordinates2;
     private Label[] lettersCoordinates;
@@ -41,6 +41,32 @@ public class Board extends VBox {
                 new Label("1")};
         this.setCoordinatesLabels();
         this.getChildren().addAll(this.board);
+    }
+    /**
+     * 2º
+     * Creates the game board with a grid of ChessButtons, criar board
+     */
+
+    private void createBoard()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                ChessButton button = new ChessButton();
+                //this.fillColor = this.color % 2 == 0 ? new BackgroundFill(Color.WHITE, null, null) :
+                                                        //new BackgroundFill(Color.BLACK, null, null);
+                //button.setBackground(new Background(this.fillColor, null, null));
+                this.board.getChildren().addAll(button);
+                //Define as posições dos botões
+                GridPane.setRowIndex(button, i + 1);
+                GridPane.setColumnIndex(button, j + 1);
+                //color++;
+            }
+            //color++;
+        }
+
+        this.setCoordinatesLabels();
     }
 
     /**
