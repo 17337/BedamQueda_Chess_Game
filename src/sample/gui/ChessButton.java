@@ -5,14 +5,20 @@ package sample.gui;
  * @version 04/05/2021
  */
 
-
-
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+
+/**
+ * 2º
+ * Button type for the chess game, cria botão com os respectivos imagens
+ */
 public class ChessButton extends Button {
 
 
     private final ImageView imageView;
+    /**
+     * Constructor
+     */
 
     public ChessButton()
     {

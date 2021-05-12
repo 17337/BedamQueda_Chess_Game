@@ -26,7 +26,7 @@ public class Board extends VBox {
     public Board()
     {
         this.board = new GridPane();
-        //this.borderPane = new BorderPane();
+        this.borderPane = new BorderPane();
         this.lettersCoordinates = new Label[]{new Label("a"), new Label("b"),new Label("c"),
                 new Label("d"), new Label("e"), new Label("f"), new Label("g"),
                 new Label("h")};
@@ -54,22 +54,22 @@ public class Board extends VBox {
             for (int j = 0; j < 8; j++)
             {
                 ChessButton button = new ChessButton();
-                //this.fillColor = this.color % 2 == 0 ? new BackgroundFill(Color.WHITE, null, null) :
-                                                        //new BackgroundFill(Color.BLACK, null, null);
-                //button.setBackground(new Background(this.fillColor, null, null));
+
                 this.board.getChildren().addAll(button);
-                //Define as posições dos botões
+                /**
+                 * 2º
+                 * Define as posições dos botões //Sets the button positions
+                 */
                 GridPane.setRowIndex(button, i + 1);
                 GridPane.setColumnIndex(button, j + 1);
-                //color++;
             }
-            //color++;
         }
 
         this.setCoordinatesLabels();
     }
 
     /**
+     * unchange
      * Sets the coordinates labels around the game board // Define os rótulos de coordenadas à volta do tabuleiro de jogo
      */
     private void setCoordinatesLabels()

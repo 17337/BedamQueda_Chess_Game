@@ -2,7 +2,7 @@ package sample.gui;
 
 /**
  * @author Bedam Queda, Erasmus
- * @version 02/05/2021
+ * @version 04/05/2021
  * Classe Star, chamar interface que utilizador precisa ver "Classe Board"
  */
 
