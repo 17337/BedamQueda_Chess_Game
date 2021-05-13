@@ -18,6 +18,7 @@ public class Board extends VBox {
     private final Label[] numbersCoordinates2;
     private Label[] lettersCoordinates;
     private Label[] lettersCoordinates2;
+    ChessButton buttons[][];
 
     /**
      * Constructor, which displays the numbers and letters around the board (graphical interface)
@@ -39,7 +40,9 @@ public class Board extends VBox {
         this.numbersCoordinates2 = new Label[]{new Label("8"), new Label("7"),new Label("6"),
                 new Label("5"), new Label("4"), new Label("3"), new Label("2"),
                 new Label("1")};
-        this.setCoordinatesLabels();
+        //this.setCoordinatesLabels();
+
+        createBoard();
         this.getChildren().addAll(this.board);
     }
     /**
@@ -54,6 +57,7 @@ public class Board extends VBox {
             for (int j = 0; j < 8; j++)
             {
                 ChessButton button = new ChessButton();
+               // buttons[i][j] = button;
 
                 this.board.getChildren().addAll(button);
                 /**

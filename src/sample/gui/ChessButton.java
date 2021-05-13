@@ -22,7 +22,8 @@ public class ChessButton extends Button {
 
     public ChessButton()
     {
-        this.imageView = new ImageView("/resources/EMPTY.png");
+        this.imageView = new ImageView("/sample/resources/EMPTY.png");
+        this.setGraphic(imageView);
         this.setPrefSize(70, 70);
     }
 }
