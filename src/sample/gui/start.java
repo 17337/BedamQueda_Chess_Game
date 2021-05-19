@@ -34,5 +34,4 @@ public class start extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-
 }

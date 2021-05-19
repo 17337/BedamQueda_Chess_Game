@@ -7,18 +7,20 @@ package sample.gui;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 
 public class Board extends VBox {
     private GridPane board;
+    private int color;
+    private BackgroundFill fillColor;
     private BorderPane borderPane;
     private final Label[] numbersCoordinates;
     private final Label[] numbersCoordinates2;
     private Label[] lettersCoordinates;
     private Label[] lettersCoordinates2;
-    ChessButton buttons[][];
+
+    //ChessButton buttons[][];
 
     /**
      * Constructor, which displays the numbers and letters around the board (graphical interface)
@@ -47,7 +49,7 @@ public class Board extends VBox {
     }
     /**
      * 2º
-     * Creates the game board with a grid of ChessButtons, criar board
+     * Creates the game board with a grid of ChessButtons, Cria o tabuleiro de jogo com uma grelha de ChessButtons
      */
 
     private void createBoard()
@@ -57,8 +59,10 @@ public class Board extends VBox {
             for (int j = 0; j < 8; j++)
             {
                 ChessButton button = new ChessButton();
-               // buttons[i][j] = button;
+                this.fillColor = this.color % 2 == 0 ? new BackgroundFill(Color.WHITE, null, null) :
+                                                        new BackgroundFill(Color.TAN, null, null);
 
+                button.setBackground(new Background(this.fillColor, null, null));
                 this.board.getChildren().addAll(button);
                 /**
                  * 2º
@@ -66,7 +70,9 @@ public class Board extends VBox {
                  */
                 GridPane.setRowIndex(button, i + 1);
                 GridPane.setColumnIndex(button, j + 1);
+                color++;
             }
+            color++;
         }
 
         this.setCoordinatesLabels();
